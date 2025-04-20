@@ -404,11 +404,11 @@ footer {
     background: linear-gradient(rgba(10, 107, 204, 0.1), rgba(212, 223, 235, 0.1));
 }
 
-.schedule-page h1 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    font-size: 2.2rem;
+.schedule-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
 }
 
 .schedule-container {
@@ -420,10 +420,24 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.schedule-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+    overflow-x: auto;
+}
+
 .schedule-table {
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
 }
 
 .schedule-table th,
@@ -433,9 +447,28 @@ footer {
     border: 1px solid #eee;
 }
 
+.schedule-table th {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.schedule-table th {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
 .schedule-table td {
     position: relative;
     padding: 1.5rem 1rem;
+}
+
+.schedule-table td {
+    padding: 1rem;
+    border: 1px solid #eee;
+    text-align: center;
 }
 
 .lesson-topic {
@@ -446,18 +479,23 @@ footer {
     font-style: italic;
 }
 
-.schedule-table td:hover .lesson-topic {
-    color: var(--accent-color);
-}
-
-.schedule-table th {
-    background: var(--primary-color);
-    color: white;
-    font-weight: 600;
+.lesson-topic {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
 }
 
 .schedule-table tr:nth-child(even) {
     background-color: #f8f9fa;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.schedule-table tr:hover {
+    background-color: #f1f4f6;
 }
 
 .schedule-table tr:hover {
@@ -470,6 +508,27 @@ footer {
     align-items: center;
     margin-bottom: 2rem;
     padding: 0 1rem;
+}
+
+.schedule-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.nav-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Tajawal', sans-serif;
+    transition: all 0.3s ease;
 }
 
 .nav-btn {
