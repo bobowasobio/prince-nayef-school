@@ -12,6 +12,11 @@
 <body>
     <header>
         <nav class="main-nav">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="logo">
                 <a href="index.html">
                     <img src="images/chool-logo.jpg" alt="شعار ثانوية الأمير نايف">
@@ -85,6 +90,25 @@
 
     <!-- Same footer and script as home.php -->
     <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.main-nav ul');
+            
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.menu-toggle') && !e.target.closest('.main-nav ul')) {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
         let lastScroll = 0;
         const header = document.querySelector('header');
         
