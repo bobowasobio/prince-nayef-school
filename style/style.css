@@ -937,3 +937,49 @@ footer {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 }
+
+/* Logo and Navigation Fixes */
+@media (max-width: 768px) {
+    .main-nav {
+        position: relative;
+        padding: 1rem;
+    }
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 999;
+    }
+
+    .logo img {
+        width: 60px;
+        height: auto;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .main-nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        padding-top: 80px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+
+    .main-nav ul.active {
+        display: flex;
+    }
+}

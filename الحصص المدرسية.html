@@ -12,13 +12,18 @@
 <body>
     <header>
         <nav class="main-nav">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="logo">
-                <a href="/prince-nayef-school/">
+                <a href="index.html">
                     <img src="images/chool-logo.jpg" alt="شعار ثانوية الأمير نايف">
                 </a>
             </div>
             <ul>
-                <li><a href="/prince-nayef-school/">الرئيسية</a></li>
+                <li><a href="index.html">الرئيسية</a></li>
                 <li><a href="الحصص المدرسية.html" class="active">الحصص المدرسية</a></li>
                 <li><a href="التواصل.html">التواصل</a></li>
             </ul>
@@ -229,6 +234,14 @@
             }
             
             lastScroll = currentScroll;
+        });
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.main-nav ul');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
     </script>
 </body>
