@@ -127,26 +127,29 @@
             lastScroll = currentScroll;
         });
 
-        // Chat functionality
-        document.querySelectorAll('.tab').forEach(tab => {
+        // Chat Interface
+        const tabs = document.querySelectorAll('.tab');
+        const chatWindow = document.querySelector('.chat-window');
+        const teachersTab = document.querySelector('.teachers-tabs');
+        const backBtn = document.querySelector('.back-btn');
+        const teacherNameSpan = document.querySelector('.teacher-name');
+
+        // Handle teacher selection
+        tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                tab.classList.add('active');
-                // Update teacher name in chat header
                 const teacherName = tab.querySelector('h3').textContent;
-                document.querySelector('.teacher-name').textContent = teacherName;
-                // Show chat window
-                document.querySelector('.chat-window').classList.add('active');
-                document.querySelector('.teachers-tabs').classList.add('hidden');
+                teacherNameSpan.textContent = teacherName;
+                
+                // Slide animations
+                teachersTab.classList.add('hidden');
+                chatWindow.classList.add('active');
             });
         });
 
-        // Back button functionality
-        document.querySelector('.back-btn').addEventListener('click', () => {
-            document.querySelector('.chat-window').classList.remove('active');
-            document.querySelector('.teachers-tabs').classList.remove('hidden');
+        // Handle back button
+        backBtn.addEventListener('click', () => {
+            chatWindow.classList.remove('active');
+            teachersTab.classList.remove('hidden');
         });
 
         // Camera button functionality
