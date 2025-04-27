@@ -70,6 +70,9 @@
 
             <div class="chat-window">
                 <div class="chat-header">
+                    <button class="back-btn">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
                     <h2>المحادثة مع <span class="teacher-name">أ. محمد أحمد</span></h2>
                 </div>
                 <div class="chat-messages">
@@ -124,6 +127,7 @@
             lastScroll = currentScroll;
         });
 
+        // Chat functionality
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
                 // Remove active class from all tabs
@@ -133,9 +137,16 @@
                 // Update teacher name in chat header
                 const teacherName = tab.querySelector('h3').textContent;
                 document.querySelector('.teacher-name').textContent = teacherName;
-                // Clear chat messages for new teacher
-                document.querySelector('.chat-messages').innerHTML = '';
+                // Show chat window
+                document.querySelector('.chat-window').classList.add('active');
+                document.querySelector('.teachers-tabs').classList.add('hidden');
             });
+        });
+
+        // Back button functionality
+        document.querySelector('.back-btn').addEventListener('click', () => {
+            document.querySelector('.chat-window').classList.remove('active');
+            document.querySelector('.teachers-tabs').classList.remove('hidden');
         });
 
         // Camera button functionality
