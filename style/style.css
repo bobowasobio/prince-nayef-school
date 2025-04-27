@@ -958,3 +958,88 @@ footer {
         display: flex;
     }
 }
+
+/* Teachers Tab Styling */
+.contact-page {
+    padding: 1rem;
+    margin-top: 80px;
+}
+
+.chat-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.teachers-tabs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow-y: auto;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.teachers-tabs.hidden {
+    transform: translateX(100%);
+}
+
+.tab {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background: #f8f9fa;
+}
+
+.tab h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.tab .subject {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.chat-window {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    background: white;
+}
+
+.chat-window.active {
+    transform: translateX(0);
+}
+
+/* Scrollbar Styling */
+.teachers-tabs::-webkit-scrollbar {
+    width: 8px;
+}
+
+.teachers-tabs::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.teachers-tabs::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+.teachers-tabs::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
