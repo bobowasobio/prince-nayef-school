@@ -272,6 +272,66 @@ footer {
     }
 }
 
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    /* Container fixes */
+    .schedule-container, .chat-container {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        overflow-x: auto;
+    }
+
+    /* Header and navigation fixes */
+    .main-nav {
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Logo size adjustment */
+    .logo img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    /* Table responsiveness */
+    .schedule-table {
+        min-width: 800px; /* Ensure table stays readable */
+    }
+
+    /* Content width control */
+    .hero, .features, .news-events {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Feature cards */
+    .feature-card {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+
+    /* News grid */
+    .news-grid {
+        padding: 0;
+    }
+
+    /* Prevent horizontal overflow */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+        overflow-x: hidden;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+}
+
 /* Contact Page */
 .contact-page {
     margin-top: 150px; /* Increased margin to prevent header overlap */
