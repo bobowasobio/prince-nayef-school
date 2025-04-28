@@ -1524,3 +1524,185 @@ footer {
     color: white;
     cursor: pointer;
 }
+
+/* Mobile Navigation and Contact Page Fixes */
+@media (max-width: 768px) {
+    /* Logo positioning */
+    .main-nav {
+        padding: 0.5rem;
+        background: white;
+    }
+    
+    .logo {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 999;
+        background: white;
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .logo img {
+        height: 40px;
+        width: auto;
+    }
+
+    /* Teachers list on mobile */
+    .contact-page {
+        margin-top: 60px;
+        padding: 0;
+    }
+
+    .chat-container {
+        height: calc(100vh - 80px);
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .teachers-tabs {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: white;
+        padding: 1rem;
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .teachers-tabs.hidden {
+        transform: translateX(-100%);
+    }
+
+    .chat-window {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .chat-window.active {
+        transform: translateX(0);
+    }
+
+    .tab {
+        width: 100%;
+        padding: 1.2rem;
+        margin-bottom: 0.5rem;
+        background: white;
+        border: 1px solid #eee;
+        border-radius: 8px;
+    }
+}
+
+/* Mobile Navigation and Contact Page Fixes */
+@media (max-width: 768px) {
+    /* Logo positioning */
+    .main-nav {
+        padding: 0.5rem;
+    }
+    
+    .logo {
+        position: absolute;
+        right: 10px; /* Changed to right for RTL */
+        top: 10px;
+        z-index: 999;
+    }
+
+    .logo img {
+        height: 40px;
+        width: auto;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        left: 10px; /* Changed to left for RTL */
+        top: 15px;
+        z-index: 999;
+    }
+
+    /* Teachers tab fixes */
+    .contact-page {
+        margin-top: 70px;
+        padding: 0;
+    }
+
+    .chat-container {
+        height: calc(100vh - 90px);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .teachers-tabs {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        padding: 1rem;
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .teachers-tabs.hidden {
+        transform: translateX(-100%); /* Changed direction for RTL */
+    }
+
+    .chat-window {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(100%); /* Changed direction for RTL */
+        transition: transform 0.3s ease;
+    }
+
+    .chat-window.active {
+        transform: translateX(0);
+    }
+
+    .tab {
+        width: 100%;
+        padding: 1.2rem;
+        margin-bottom: 0.5rem;
+        background: white;
+        border: 1px solid #eee;
+        border-radius: 8px;
+    }
+
+    .tab h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+        color: var(--primary-color);
+    }
+
+    .tab .subject {
+        color: #666;
+        margin: 0;
+    }
+
+    /* Chat window fixes */
+    .chat-header {
+        position: sticky;
+        top: 0;
+        background: var(--primary-color);
+        padding: 1rem;
+        z-index: 10;
+    }
+
+    .chat-input {
+        position: sticky;
+        bottom: 0;
+        background: white;
+        padding: 1rem;
+        border-top: 1px solid #eee;
+    }
+}
