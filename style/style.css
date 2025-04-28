@@ -1395,3 +1395,132 @@ footer {
         scrollbar-width: none;
     }
 }
+
+/* Contact Page Styles */
+.contact-page {
+    margin-top: 80px;
+    padding: 1rem;
+}
+
+/* Desktop Layout */
+@media (min-width: 769px) {
+    .chat-container {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        height: calc(100vh - 200px);
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .teachers-tabs {
+        width: 30%;
+        border-right: 1px solid #eee;
+    }
+
+    .chat-window {
+        width: 70%;
+    }
+
+    .back-btn {
+        display: none;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .chat-container {
+        position: relative;
+        height: calc(100vh - 120px);
+        background: white;
+        overflow: hidden;
+    }
+
+    .teachers-tabs {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: white;
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .teachers-tabs.hidden {
+        transform: translateX(100%);
+    }
+
+    .chat-window {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .chat-window.active {
+        transform: translateX(0);
+    }
+}
+
+/* Common Styles */
+.tab {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background: #f8f9fa;
+}
+
+.tab h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.tab .subject {
+    margin: 0;
+    color: #666;
+}
+
+.chat-header {
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.chat-input {
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.chat-input textarea {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    resize: none;
+}
+
+.chat-input button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
